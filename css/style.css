@@ -1,14 +1,1089 @@
+/*=================================================
+        HABLEMOS NETWORK
+        CSS PROFESIONAL
+=================================================*/
 
 /*=================================================
-    33. RESPONSIVE - LAPTOPS / PANTALLAS MEDIANAS
+        1. GOOGLE FONTS
 =================================================*/
-@media (max-width: 1200px) {
-    .hero-texto h1 {
-        font-size: 50px;
-        line-height: 60px;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/*=================================================
+        2. VARIABLES
+=================================================*/
+
+:root {
+    --color-principal: #0A3654;
+    --color-secundario: #00B8F0;
+    --color-claro: #FFFFFF;
+    --color-oscuro: #111111;
+    --gris: #d9d9d9;
+
+    --degradado: linear-gradient(90deg, #00B8F0, #0A3654);
+}
+
+
+/*=================================================
+        3. RESET GENERAL
+=================================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #111;
+    color: white;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/*=================================================
+        4. HEADER
+=================================================*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    background: rgba(10, 54, 84, .95);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+
+/*=================================================
+        5. NAVBAR
+=================================================*/
+
+.navbar {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 0;
+}
+
+
+/*=================================================
+        6. LOGO HEADER
+=================================================*/
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    background: white;
+
+    transition: .4s;
+
+    box-shadow: 0 0 25px rgba(0, 184, 240, .35);
+}
+
+.logo img:hover {
+    transform: rotate(360deg) scale(1.1);
+}
+
+.logo h2 {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--color-secundario);
+}
+
+
+/*=================================================
+        7. MENU
+=================================================*/
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: 500;
+
+    transition: .4s;
+
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 3px;
+
+    background: var(--color-secundario);
+
+    transition: .4s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: var(--color-secundario);
+}
+
+
+/*=================================================
+        8. BOTONES GENERALES
+=================================================*/
+
+.btn {
+    padding: 14px 35px;
+
+    background: var(--degradado);
+
+    border-radius: 40px;
+
+    color: white;
+    font-weight: 600;
+
+    transition: .4s;
+
+    display: inline-block;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 30px rgba(0, 184, 240, .4);
+}
+
+
+/*=================================================
+        9. HERO
+=================================================*/
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 120px;
+}
+
+.hero-contenedor {
+    width: 90%;
+    max-width: 1300px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+
+/*=================================================
+        10. TEXTO HERO
+=================================================*/
+
+.hero-texto h1 {
+    font-size: 65px;
+    line-height: 75px;
+
+    margin-bottom: 25px;
+}
+
+.hero-texto h1 span {
+    color: var(--color-secundario);
+}
+
+.hero-texto p {
+    color: #ddd;
+
+    font-size: 18px;
+
+    margin-bottom: 35px;
+
+    line-height: 30px;
+}
+
+
+/*=================================================
+        11. VIDEO
+=================================================*/
+
+.video-box video {
+    width: 100%;
+    border-radius: 15px;
+}
+
+
+/*=================================================
+        12. SCROLL
+=================================================*/
+
+.scroll {
+    position: absolute;
+
+    bottom: 30px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: white;
+
+    animation: subir 2s infinite;
+}
+
+@keyframes subir {
+
+    0% {
+        transform: translate(-50%, 0);
     }
+
+    50% {
+        transform: translate(-50%, 15px);
+    }
+
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+}
+
+
+/*=================================================
+        13. SERVICIOS
+=================================================*/
+
+.servicios {
+    width: 90%;
+    max-width: 1300px;
+
+    margin: 120px auto;
+}
+
+
+/*=================================================
+        14. TITULOS
+=================================================*/
+
+.titulo {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.titulo h2 {
+    font-size: 48px;
+    color: white;
+}
+
+.titulo span {
+    color: var(--color-secundario);
+}
+
+.titulo p {
+    margin-top: 20px;
+    color: #cfcfcf;
+}
+
+
+/*=================================================
+        15. CARDS
+=================================================*/
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 35px;
+}
+
+.card {
+    background: #172838;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    transition: .5s;
+
+    border: 1px solid rgba(255, 255, 255, .06);
+}
+
+.card:hover {
+    transform: translateY(-15px);
+
+    box-shadow:
+        0 25px 45px rgba(0, 184, 240, .25);
+}
+
+.card i {
+    font-size: 60px;
+
+    color: var(--color-secundario);
+
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 20px;
+
+    font-size: 26px;
+}
+
+.card p {
+    color: #d9d9d9;
+
+    line-height: 28px;
+}
+
+
+/*=================================================
+        16. GALERÍA CARRUSEL
+=================================================*/
+
+.galeria-carrusel {
+    width: 90%;
+    max-width: 1300px;
+
+    margin: 120px auto;
+}
+
+.galeria-carrusel h2 {
+    text-align: center;
+
+    font-size: 48px;
+
+    margin-bottom: 50px;
+
+    color: #fff;
+}
+
+
+/*=================================================
+        17. CONTENEDOR CARRUSEL
+=================================================*/
+
+.contenedor-carrusel {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.carrusel {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carrusel-track {
+    display: flex;
+
+    transition: transform .6s ease;
+}
+
+
+/*=================================================
+        18. FOTOS DEL CARRUSEL
+=================================================*/
+
+.foto {
+    min-width: 25%;
+    padding: 12px;
+}
+
+.foto img {
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    border: 2px solid rgba(255, 255, 255, .05);
+
+    transition: .4s;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, .35);
+}
+
+.foto img:hover {
+    transform: scale(1.05);
+
+    box-shadow:
+        0 18px 35px rgba(0, 184, 240, .35);
+}
+
+
+/*=================================================
+        19. FLECHAS DEL CARRUSEL
+=================================================*/
+
+.btn-carrusel {
+    width: 55px;
+    height: 55px;
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 10;
+
+    background: rgba(10, 54, 84, .95);
+
+    color: #fff;
+
+    font-size: 22px;
+
+    transition: .3s;
+}
+
+.btn-carrusel:hover {
+    background: #00B8F0;
+
+    transform:
+        translateY(-50%) scale(1.08);
+}
+
+.prev {
+    left: -25px;
+}
+
+.next {
+    right: -25px;
+}
+
+
+/*=================================================
+        20. ESTADÍSTICAS
+=================================================*/
+
+.estadisticas {
+    margin-top: 40px;
+
+    display: flex;
+
+    gap: 30px;
+}
+
+.numero {
+    flex: 1;
+
+    background: #1B3245;
+
+    padding: 25px;
+
+    border-radius: 15px;
+}
+
+.numero h3 {
+    font-size: 42px;
+
+    color: var(--color-secundario);
+}
+
+.numero p {
+    margin-top: 10px;
+}
+
+
+/*=================================================
+        21. DESTACADO
+=================================================*/
+
+.destacado {
+    width: 90%;
+    max-width: 1300px;
+
+    margin: 120px auto;
+}
+
+.destacado-contenedor {
+    display: grid;
+
+    grid-template-columns: 350px 1fr;
+
+    gap: 70px;
+
+    align-items: start;
+}
+
+.destacado-texto h2 {
+    font-size: 48px;
+
+    margin-bottom: 30px;
+}
+
+.destacado-texto span {
+    color: #00B8F0;
+}
+
+.destacado-info h2 {
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+.destacado-info p {
+    color: #d8d8d8;
+
+    margin-bottom: 35px;
+
+    line-height: 30px;
+}
+
+
+/*=================================================
+        22. BOTÓN SOUNDCLOUD
+=================================================*/
+
+.btn-escucha {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 16px 38px;
+
+    background: var(--degradado);
+
+    color: var(--color-claro);
+
+    border: none;
+
+    border-radius: 50px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all .4s ease;
+
+    box-shadow:
+        0 12px 30px rgba(0, 184, 240, .30);
+}
+
+.btn-escucha i {
+    font-size: 28px;
+}
+
+.btn-escucha:hover {
+    transform: translateY(-5px) scale(1.03);
+
+    box-shadow:
+        0 18px 40px rgba(0, 184, 240, .45);
+}
+
+.btn-escucha:active {
+    transform: scale(.97);
+}
+
+
+/*=================================================
+        23. PODCASTS
+=================================================*/
+
+.podcast-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 30px;
+
+    margin-top: 50px;
+}
+
+.podcast-card {
+    background: #17324A;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: .4s;
+
+    text-align: center;
+
+    color: white;
+
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, .35);
+}
+
+.podcast-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 20px 40px rgba(0, 184, 240, .35);
+}
+
+.podcast-card img {
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+}
+
+.podcast-card h3 {
+    padding: 20px;
+
+    font-size: 22px;
+
+    font-weight: 600;
+}
+
+
+/*=================================================
+        24. FOOTER
+=================================================*/
+
+footer {
+    background: #09151E;
+
+    margin-top: 0;
+
+    padding: 70px 8% 25px;
+}
+
+
+/*=================================================
+        25. CONTENEDOR PRINCIPAL FOOTER
+=================================================*/
+
+/*
+    Tres zonas:
     
-    .nav-links {
-        gap: 25px; /* Reducimos un poco el espacio entre enlaces del menú para que no se salgan */
+    IZQUIERDA  = Hablemos Network
+    CENTRO     = Keep It Simple
+    DERECHA    = Síguenos
+*/
+
+.footer-grid {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 240px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, .08);
+}
+
+
+/*=================================================
+        26. LOGO IZQUIERDO
+=================================================*/
+
+.footer-info {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+}
+
+.footer-info img {
+    width: 145px;
+
+    height: auto;
+
+    max-width: 145px;
+
+    display: block;
+}
+
+.footer-info p {
+    margin-top: 10px;
+
+    color: #ccc;
+
+    font-size: 18px;
+}
+
+
+/*=================================================
+        27. LOGO CENTRAL
+=================================================*/
+
+.footer-logo-centro {
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo-centro img {
+    width: 230px;
+
+    height: auto;
+
+    max-width: 230px;
+
+    display: block;
+}
+
+
+/*=================================================
+        28. REDES SOCIALES DERECHA
+=================================================*/
+
+.footer-links {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.footer-links h3 {
+    margin-bottom: 25px;
+
+    font-size: 22px;
+}
+
+.footer-links a {
+    display: block;
+
+    color: #ccc;
+
+    margin-bottom: 15px;
+
+    transition: .3s;
+
+    font-size: 18px;
+}
+
+.footer-links a:hover {
+    color: var(--color-secundario);
+
+    padding-left: 10px;
+}
+
+
+/*=================================================
+        29. COPYRIGHT
+=================================================*/
+
+.copy {
+    text-align: center;
+
+    margin-top: 35px;
+
+    padding-top: 0;
+
+    color: #999;
+
+    font-size: 18px;
+}
+
+
+/*=================================================
+        30. RESPONSIVE - TABLET
+=================================================*/
+
+@media (max-width: 1000px) {
+
+    /* HERO */
+
+    .hero-contenedor {
+        grid-template-columns: 1fr;
+
+        text-align: center;
     }
+
+
+    /* DESTACADO */
+
+    .destacado-contenedor {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* ESTADÍSTICAS */
+
+    .estadisticas {
+        flex-direction: column;
+    }
+
+
+    /* CARRUSEL */
+
+    .foto {
+        min-width: 50%;
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+        min-height: 400px;
+    }
+
+}
+
+
+/*=================================================
+        31. RESPONSIVE - MÓVIL
+=================================================*/
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+
+        gap: 18px;
+
+        text-align: center;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding-top: 220px;
+    }
+
+    .hero-texto h1 {
+        font-size: 42px;
+
+        line-height: 50px;
+    }
+
+
+    /* TITULOS */
+
+    .titulo h2 {
+        font-size: 34px;
+    }
+
+    .destacado h2 {
+        font-size: 35px;
+    }
+
+    .cta h2 {
+        font-size: 36px;
+    }
+
+
+    /* CTA */
+
+    .cta p {
+        width: 100%;
+    }
+
+
+    /* CARRUSEL */
+
+    .foto {
+        min-width: 100%;
+    }
+
+    .galeria-carrusel h2 {
+        font-size: 36px;
+    }
+
+    .prev {
+        left: 0;
+    }
+
+    .next {
+        right: 0;
+    }
+
+
+    /* FOOTER */
+
+    .footer-grid {
+        position: relative;
+
+        min-height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 45px;
+
+        text-align: center;
+
+        padding-bottom: 40px;
+    }
+
+    .footer-info,
+    .footer-logo-centro,
+    .footer-links {
+        position: static;
+
+        transform: none;
+    }
+
+    .footer-info {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .footer-info img {
+        width: 120px;
+    }
+
+    .footer-logo-centro img {
+        width: 180px;
+    }
+
+    .footer-links {
+        align-items: center;
+    }
+
+    .footer-links h3 {
+        margin-bottom: 20px;
+    }
+
+    .copy {
+        margin-top: 30px;
+    }
+
+}
+
+
+/*=================================================
+        32. CTA
+=================================================*/
+
+.cta {
+    width: 100%;
+
+    margin-top: 120px;
+
+    padding: 90px 10%;
+
+    background:
+        linear-gradient(120deg, #0A3654, #00B8F0);
+
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 50px;
+
+    margin-bottom: 20px;
+}
+
+.cta p {
+    width: 70%;
+
+    margin: auto;
+
+    margin-bottom: 40px;
+}
+
+.cta .btn {
+    background: white;
+
+    color: #0A3654;
+}
+
+.cta .btn:hover {
+    color: white;
+}
+
+.podcast-card {
+    background: #17324A;
+    border-radius: 20px;
+    overflow: hidden; /* Esto corta todo lo que sobresalga de la tarjeta */
+    transition: .4s;
+    text-align: center;
+    color: white;
+    position: relative; /* Importante para que los elementos hijos absolutos se posicionen bien */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .35);
 }
