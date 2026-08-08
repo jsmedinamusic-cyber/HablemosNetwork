@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>¿Qué Hacemos? | Hablemos Network</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<img src="css/Isologob.png" alt="Andrés Escobar">
+
+<h2>Andrés<span> Escobar</span></h2>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="home.html">Home</a></li>
+
+<li><a href="quehacemos.html">Bio</a></li>
+
+<li><a href="quevendemos.html">¿Vamos al siguiente nivel?</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-contenedor">
+
+<div class="hero-texto">
+
+<h1>
+    Un
+    
+<span>poco</span>
+
+    de historia
+</h1>
+
+<p>
+
+Andrés Escobar es YouTube content specialist y Music industry coach con 17 años de trayectoria en la industria del entretenimiento musical y la gestión de contenido digital. Con una sólida base de una década en la radio audiovisual y la locución, ha sido pieza clave en el crecimiento global de marcas personales y grandes talentos, gestionando la monetización, estrategia y optimización de canales de YouTube para figuras de la música como Manuel Turizo, Nicky Jam, J Balvin, Jessi Uribe, Blessd y creadores de contenido como WestCOL. Es asesor estratégico de podcasts e industrias creativas en hispanoamérica, conferencista universitario y parte del equipo del proyecto internacional De Todo Podcast en California.
+
+</p>
+
+<p>Esta trayectoria me ha permitido comprender profundamente la conexión entre la música y el público, asesorar a empresas, artistas y podcasters hispanohablantes, y formar parte del equipo internacional “De Todo Podcast” liderado por Reyna Franco en California. Además, he compartido mi experiencia como speaker en universidades, promoviendo el poder de la voz y la creación de experiencias.</p>
+
+</div>
+
+<div>
+
+<img src="css/Perfil 1.jpeg" alt="Hablemos Network">
+
+</div>
+
+</div>
+
+</section>
+
+<section class="servicios">
+
+<div class="titulo">
+
+<h2>
+
+Galeria de
+
+<span>Fotos</span>
+
+</h2>
+
+
+<section class="galeria-carrusel">
+
+    <div class="contenedor-carrusel">
+
+        <button class="btn-carrusel prev">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="carrusel">
+
+            <div class="carrusel-track">
+            
+
+
+
+                <img src="css/foto5.jpg" alt="Foto 1" class="foto">
+                <img src="css/foto2.webp" alt="Foto 2" class="foto">
+                <img src="css/foto3.webp" alt="Foto 3" class="foto">
+                <img src="css/foto4.webp" alt="Foto 4" class="foto">
+
+                <img src="css/DSC_0034.jpeg" alt="Foto 5" class="foto">
+                <img src="css/DSC08296.jpg" alt="Foto 6" class="foto">
+                <img src="css/FOTOS.webp" alt="Foto 7" class="foto">
+                <img src="css/IMG_1491.JPG" alt="Foto 8" class="foto">
+
+            </div>
+
+        </div>
+
+        <button class="btn-carrusel next">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<a href="https://wa.me/573239701862?text=Hola,%20quiero%20más%20información%20sobre%20Hablemos%20Network." target="_blank" class="btn">
+    ESCRÍBENOS
+</a>
+
+
+</section>
+
+<footer>
+    <div class="footer-grid">
+
+        <!-- IZQUIERDA -->
+        <div class="footer-info">
+            <img src="css/HABLEMOS NETWORK LOGO EDIT.png" alt="Hablemos Network">
+
+            <p>Creamos contenido </p>
+            
+            <p> que inspira.</p>
+
+        </div>
+
+        <!-- CENTRO -->
+        <div class="footer-logo-centro">
+            <img src="css/simple.png" alt="Hablemos Network">
+
+        </div>
+
+        <!-- DERECHA -->
+        <div class="footer-links">
+            <h3>Síguenos</h3>
+
+            <a href="https://www.facebook.com/networkhablemos" target="_blank">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+
+            <a href="https://www.instagram.com/networkhablemos/" target="_blank">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+
+            <a href="https://www.youtube.com/@networkhablemos" target="_blank">
+                <i class="fab fa-youtube"></i> YouTube
+            </a>
+        </div>
+
+    </div>
+
+    <div class="copy">
+        © 2026 Hablemos Network
+    </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const carrusel = document.querySelector(".carrusel");
+    const track = document.querySelector(".carrusel-track");
+    const btnPrev = document.querySelector(".btn-carrusel.prev");
+    const btnNext = document.querySelector(".btn-carrusel.next");
+
+    let posicion = 0;
+
+    function moverCarrusel(direccion) {
+
+        const fotos = track.querySelectorAll(".foto");
+
+        if (fotos.length === 0) return;
+
+        const foto = fotos[0];
+
+        const anchoFoto = foto.getBoundingClientRect().width;
+
+        const estilo = window.getComputedStyle(track);
+        const gap = parseFloat(estilo.gap) || 0;
+
+        const movimiento = anchoFoto + gap;
+
+        const anchoVisible = carrusel.clientWidth;
+        const anchoTotal = track.scrollWidth;
+
+        const maximo = anchoTotal - anchoVisible;
+
+        posicion += direccion * movimiento;
+
+        if (posicion < 0) {
+            posicion = 0;
+        }
+
+        if (posicion > maximo) {
+            posicion = maximo;
+        }
+
+        track.style.transform = `translateX(-${posicion}px)`;
+    }
+
+    btnPrev.addEventListener("click", function () {
+        moverCarrusel(-1);
+    });
+
+    btnNext.addEventListener("click", function () {
+        moverCarrusel(1);
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>
