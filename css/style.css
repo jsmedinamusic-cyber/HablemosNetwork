@@ -1501,6 +1501,7 @@ header {
         0 18px 35px rgba(0, 184, 240, .35);
 }
 
+
 /* PC pequeño */
 @media (max-width: 1100px) {
     .foto {
@@ -1512,6 +1513,7 @@ header {
     }
 }
 
+
 /* Tablet */
 @media (max-width: 768px) {
     .foto {
@@ -1522,6 +1524,7 @@ header {
         height: 260px;
     }
 }
+
 
 /* Celular */
 @media (max-width: 500px) {
@@ -1537,7 +1540,6 @@ header {
         object-fit: contain;
     }
 }
-
 /*=================================================
         19. FLECHAS DEL CARRUSEL
 =================================================*/
