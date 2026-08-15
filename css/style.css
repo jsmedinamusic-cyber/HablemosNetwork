@@ -714,7 +714,7 @@ header {
 
     height: 280px;
 
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .podcast-card h3 {
