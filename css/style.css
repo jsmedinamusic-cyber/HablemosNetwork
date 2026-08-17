@@ -449,8 +449,8 @@ header {
 
     box-sizing: border-box;
 
-    object-fit: cover;
-    object-position: top;
+    object-fit: contain;
+    object-position: center;
     border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, .05);
     transition: .4s;
