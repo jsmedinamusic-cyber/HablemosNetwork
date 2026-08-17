@@ -450,18 +450,12 @@ header {
     box-sizing: border-box;
 
     object-fit: cover;
-    object-position: top
-    border-radius: 18px;
+    object-position: top;
+    border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, .05);
     transition: .4s;
     box-shadow: 0 12px 30px rgba(0, 0, 0, .35);
 }
-
-.foto:hover {
-    transform: scale(1.05);
-    box-shadow: 0 18px 35px rgba(0, 184, 240, .35);
-}
-
 
 /* PC pequeño */
 @media (max-width: 1100px) {
