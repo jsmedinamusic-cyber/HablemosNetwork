@@ -1118,21 +1118,17 @@ footer {
     transform: scale(1.02);
 }
 
-/* =================================================
-EXCLUSIVO PARA MÓVILES
-================================================= */
 @media (max-width: 768px) {
     .cta-ebook {
-        /* 15px arriba y abajo, y 0 a los lados para que ocupe todo el ancho */
         padding: 15px 0px;
-        width: 100%;
+        width: 100%;       /* Ocupa todo el ancho de la pantalla */
     }
     
     .imagen-ebook {
         margin-top: 0;
-        width: 100%;          /* Ocupa el ancho completo de la pantalla de lado a lado */
-        max-width: 100%;
-        border-radius: 0;     /* Opcional: quita los bordes redondeados si quieres que toque los extremos perfectamente */
+        width: 100%;       /* Forzamos que la imagen use todo el ancho */
+        max-width: 100%;   /* Eliminamos cualquier límite de ancho en móvil */
+        border-radius: 0;  /* Para que los bordes toquen los extremos si lo deseas */
         transform: none;
     }
     
