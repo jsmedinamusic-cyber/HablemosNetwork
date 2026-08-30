@@ -1124,7 +1124,7 @@ XCLUSIVO PARA MÓVILES (Aquí jugamos con los márgenes)
 @media (max-width: 768px) {
     .cta-ebook {
         /* Reducimos drásticamente el padding en celular para eliminar el "aire" extra */
-        padding: 20px 10px; 
+        padding: 10px 5px;
     }
     
     .imagen-ebook {
