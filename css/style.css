@@ -1087,28 +1087,24 @@ footer {
 }
 
 /*=================================================
-        32. CTA EBOOK (EFECTO FLOTANTE RESPONSIVO)
+        32. CTA EBOOK (CONFIGURACIÓN FINAL PC + MÓVIL)
 =================================================*/
 
 .cta-ebook {
     width: 100%;
-    /* Añadimos un padding-top generoso para dejar espacio 
-       para que la imagen flote hacia arriba sin tapar lo de arriba */
-    padding: 100px 20px 60px 20px;
+    padding: 70px 20px 60px 20px;
     background: linear-gradient(120deg, #0A3654, #00B8F0);
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: visible; /* Permite que la imagen sobresalga del contenedor */
+    overflow: visible;
     z-index: 1;
 }
 
 .imagen-ebook {
     position: relative;
-    /* El margen superior negativo hace que la imagen "suba" 
-       y flote sobre el borde superior del contenedor azul en PC */
-    margin-top: -140px;
+    margin-top: -60px; /* Efecto flotante perfecto en PC */
     width: 95%;
     max-width: 1300px;
     height: auto;
@@ -1122,14 +1118,23 @@ footer {
     transform: scale(1.02);
 }
 
-/* Ajuste específico para celulares para que no se encime mal */
+/* =================================================
+XCLUSIVO PARA MÓVILES (Aquí jugamos con los márgenes)
+================================================= */
 @media (max-width: 768px) {
     .cta-ebook {
-        padding: 40px 15px; /* Reducimos el padding en móvil */
+        /* Reducimos drásticamente el padding en celular para eliminar el "aire" extra */
+        padding: 20px 10px; 
     }
     
     .imagen-ebook {
-        margin-top: 0; /* En móvil eliminamos el margen negativo para que fluya normal */
-        width: 100%;
+        margin-top: 0;        /* Quitamos el margen negativo para que no flote mal */
+        width: 100%;          /* Ocupa todo el ancho disponible del celular */
+        max-width: 100%;      /* Evita restricciones de tamaño */
+        transform: none;
+    }
+    
+    .imagen-ebook:hover {
+        transform: none;
     }
 }
