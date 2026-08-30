@@ -1086,3 +1086,30 @@ footer {
     color: white;
 }
 
+.imagen-ebook {
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    max-width: 1300px;         /* igualado al ancho del resto del sitio */
+    height: auto;
+    display: block;
+    cursor: pointer;
+    z-index: 5;
+    transition: transform 0.3s ease;
+}
+
+.imagen-ebook:hover {
+    transform: translate(-50%, -50%) scale(1.02);
+}
+
+.cta-ebook {
+    width: 100%;
+    min-height: 400px;         /* ajustado para la imagen más ancha */
+    padding: 0 20px;
+    background: linear-gradient(120deg, #0A3654, #00B8F0);
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+}
