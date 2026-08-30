@@ -1098,7 +1098,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: visible;
+    overflow: hidden; /* Cambiado a hidden para evitar fugas visuales */
     z-index: 1;
 }
 
@@ -1120,15 +1120,17 @@ footer {
 
 @media (max-width: 768px) {
     .cta-ebook {
-        padding: 15px 0px;
-        width: 100%;       /* Ocupa todo el ancho de la pantalla */
+        /* Padding equilibrado para que no quede muy pegado ni muy corto arriba y abajo */
+        padding: 30px 15px; 
+        width: 100%;
+        box-sizing: border-box;
     }
     
     .imagen-ebook {
         margin-top: 0;
-        width: 100%;       /* Forzamos que la imagen use todo el ancho */
-        max-width: 100%;   /* Eliminamos cualquier límite de ancho en móvil */
-        border-radius: 0;  /* Para que los bordes toquen los extremos si lo deseas */
+        width: 100%;
+        max-width: 100%;
+        border-radius: 12px; /* Mantiene una estética limpia con esquinas sutiles */
         transform: none;
     }
     
