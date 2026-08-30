@@ -1119,18 +1119,20 @@ footer {
 }
 
 /* =================================================
-XCLUSIVO PARA MÓVILES (Aquí jugamos con los márgenes)
+EXCLUSIVO PARA MÓVILES
 ================================================= */
 @media (max-width: 768px) {
     .cta-ebook {
-        /* Reducimos drásticamente el padding en celular para eliminar el "aire" extra */
-        padding: 10px 5px;
+        /* 15px arriba y abajo, y 0 a los lados para que ocupe todo el ancho */
+        padding: 15px 0px;
+        width: 100%;
     }
     
     .imagen-ebook {
-        margin-top: 0;        /* Quitamos el margen negativo para que no flote mal */
-        width: 100%;          /* Ocupa todo el ancho disponible del celular */
-        max-width: 100%;      /* Evita restricciones de tamaño */
+        margin-top: 0;
+        width: 100%;          /* Ocupa el ancho completo de la pantalla de lado a lado */
+        max-width: 100%;
+        border-radius: 0;     /* Opcional: quita los bordes redondeados si quieres que toque los extremos perfectamente */
         transform: none;
     }
     
