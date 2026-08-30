@@ -28,6 +28,9 @@
 /*=================================================
         3. RESET GENERAL
 =================================================*/
+/*=================================================
+        3. RESET GENERAL
+=================================================*/
 
 * {
     margin: 0;
@@ -38,27 +41,19 @@
 
 html {
     scroll-behavior: smooth;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
     background: #111;
     color: white;
-    overflow-x: hidden;
-}
-
-img {
     width: 100%;
-    display: block;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
 }
-
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
 
 /*=================================================
         4. HEADER
