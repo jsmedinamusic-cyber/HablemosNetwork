@@ -1087,54 +1087,57 @@ footer {
 }
 
 /*=================================================
-        32. CTA EBOOK (CONFIGURACIÓN FINAL PC + MÓVIL)
+        32. CTA EBOOK (CONFIGURACIÓN PC Y MÓVIL)
 =================================================*/
+
+.cta {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 120px;
+    padding: 70px 5%;
+    background: linear-gradient(120deg, #0A3654, #00B8F0);
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
 
 .cta-ebook {
     width: 100%;
-    padding: 70px 20px 60px 20px;
-    background: linear-gradient(120deg, #0A3654, #00B8F0);
-    position: relative;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Cambiado a hidden para evitar fugas visuales */
-    z-index: 1;
+    box-sizing: border-box;
 }
 
 .imagen-ebook {
-    position: relative;
-    margin-top: -60px; /* Efecto flotante perfecto en PC */
-    width: 95%;
-    max-width: 1300px;
+    width: 100%;
+    max-width: 450px; /* Controla que la portada del ebook no quede gigantesca en PC */
     height: auto;
     display: block;
+    margin: 0 auto;
     cursor: pointer;
-    z-index: 5;
+    border-radius: 12px;
     transition: transform 0.3s ease;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
 .imagen-ebook:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 
+/* Ajuste Responsive Móvil para el CTA y la Imagen */
 @media (max-width: 768px) {
-    .cta-ebook {
-        /* Padding equilibrado para que no quede muy pegado ni muy corto arriba y abajo */
-        padding: 30px 15px; 
-        width: 100%;
-        box-sizing: border-box;
-    }
-    
-    .imagen-ebook {
-        margin-top: 0;
+    .cta {
+        margin-top: 60px;
+        padding: 40px 15px;
         width: 100%;
         max-width: 100%;
-        border-radius: 12px; /* Mantiene una estética limpia con esquinas sutiles */
-        transform: none;
     }
-    
-    .imagen-ebook:hover {
-        transform: none;
+
+    .imagen-ebook {
+        width: 90%; /* Se adapta de forma fluida al ancho del celular sin causar scroll */
+        max-width: 100%;
+        border-radius: 10px;
     }
 }
