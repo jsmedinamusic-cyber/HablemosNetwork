@@ -1159,3 +1159,38 @@ html, body {
 div, section, img, header, footer {
     max-width: 100%;
 }
+
+/*=================================================
+        CORRECCIÓN TOTAL DE ALINEACIÓN Y SCROLL MÓVIL
+=================================================*/
+
+html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+}
+
+/* Forzar que todos los elementos principales respeten el ancho de la pantalla y se centren */
+body * {
+    box-sizing: border-box;
+}
+
+/* Forzar que las secciones ocupen exactamente el 100% sin desbordarse */
+.hero, .servicios, .cta, footer, header {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+/* Corrección específica para que la barra de navegación no se descuadre */
+.navbar {
+    width: 90% !important;
+    max-width: 1300px !important;
+    margin: 0 auto !important;
+}
