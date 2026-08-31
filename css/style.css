@@ -1140,3 +1140,22 @@ footer {
         object-fit: cover;
     }
 }
+
+/*=================================================
+        33. BLOQUEO DEFINITIVO DE SCROLL LATERAL
+=================================================*/
+
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    position: relative;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Forzar que cualquier contenedor o imagen nunca rebase el ancho de la pantalla */
+div, section, img, header, footer {
+    max-width: 100%;
+}
