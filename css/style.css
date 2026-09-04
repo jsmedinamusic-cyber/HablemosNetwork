@@ -942,10 +942,13 @@ footer {
         padding-top: 300px;
     }
 
-    .hero-texto h1 {
-        font-size: 42px;
-
-        line-height: 50px;
+        .hero-texto h1 {
+        font-size: 36px;
+        line-height: 1.3;
+        text-align: center;
+        overflow-wrap: break-word;
+        padding: 0 10px;
+    };
     }
 
 
@@ -966,6 +969,12 @@ footer {
 
     /* CTA */
 
+@media (max-width: 400px) {
+    .hero-texto h1 {
+        font-size: 30px;
+        line-height: 1.25;
+    }
+}
     .cta p {
         width: 100%;
     }
@@ -1042,7 +1051,7 @@ footer {
         margin-top: 30px;
     }
 
-}
+
 
 
 /*=================================================
